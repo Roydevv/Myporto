@@ -10,19 +10,19 @@ export const educationHistory = [
 },
 {
     id: 2,
-    institution: 'SMK AL-IMAN Banjar Agung',
-    major: 'Teknik Komputer dan Jaringan',
+    institution: 'SMa BHUDAYA 2 AGUSTINUS',
+    major: 'IPA',
     period: '2020 - 2023',
 },
 {
     id: 3,
-    institution: 'MTs AL-IMAN Banjar Agung',
+    institution: 'SMPN 32 JAKARTA',
     major: '',
     period: '2017 - 2020',
 },
 {
     id: 4,
-    institution: 'SDN 01 Ringin Sari',
+    institution: 'SD HARAVRD',
     major: '',
     period: '2011 - 2017',
 },
@@ -45,22 +45,22 @@ export const projects = [
 {
     title: 'Website Portofolio Pribadi',
     description: 'Portofolio interaktif yang sedang Anda lihat sekarang. Dibuat dengan Vue.js untuk frontend dan Express.js untuk backend.',
-    image: '/images/proyek-portfolio.png', // Simpan gambar di folder `frontend/public/images/`
+    image: '/images/bg-cover.jpg', // Simpan gambar di folder `frontend/public/images/`
     tech: ['Vue.js', 'TailwindCSS', 'Express.js'],
-    link: 'https://github.com/wahidnur659/interactive-cv', // Link ke GitHub atau demo langsung
+    link: 'https://github.com/Roydevv/Myporto.git', // Link ke GitHub atau demo langsung
 },
 {
-    title: 'Aplikasi E-Commerce Sepatu',
+    title: 'Aplikasi Top UP All Game',
     description: 'Proyek tugas akhir mata kuliah Pemrograman Web, membuat toko online dengan fitur keranjang belanja dan checkout.',
     image: '/images/lucien.jpg',
     tech: ['PHP', 'Laravel', 'Vue.js', 'MySQL', 'TailwindCSS'],
-    link: 'https://github.com/GITikhsan/LUCIEN-AVENUE-FRONTEND.git', 
+    link: 'https://Koosell.github.io/final-project-fullstack', 
 },
 {
-    title: 'Aplikasi E-Book Cendikia',
+    title: 'Aplikasi ABC Top Up',
     description: 'Proyek Unit Kegiatan Mahasiswa Amikom Computer Club, membuat tempat membaca berupa E-book dengan fitur chat global dan membership.',
-    image: '/images/cendikia.jpg',
+    image: '/images/abc.jpg',
     tech: ['Flutter', 'Firebase', 'Dart'],
-    link: 'https://github.com/wahidnur659/cendikia.git',
+    link: 'https://Koosell.github.io/final-project-fullstack',
 },
 ];

@@ -25,15 +25,15 @@ app.post('/api/send-email', async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'wahidnur659@gmail.com', // <-- GANTI DENGAN EMAILMU
-      pass: 'bzar gegm xitl bcyz' // <-- GANTI DENGAN APP PASSWORD
+      user: 'roydevgantara472@gmail.com', // <-- GANTI DENGAN EMAILMU
+      pass: 'ibhd nnpt tzfz insf' // <-- GANTI DENGAN APP PASSWORD
     }
   });
 
   // Opsi Email
   const mailOptions = {
     from: `"${name}" <${email}>`, // Pengirim
-    to: 'wahidnur659@gmail.com', // Penerima (emailmu sendiri)
+    to: 'roydevgantara472@gmail.com', // Penerima (emailmu sendiri)
     subject: `Pesan Baru dari Portofolio dari ${name}`,
     text: `Anda mendapat pesan dari: ${name} (${email})\n\nPesan:\n${message}`
   };

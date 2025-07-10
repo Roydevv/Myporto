@@ -4,9 +4,12 @@ import axios from 'axios';
 import SectionTitle from './SectionTitle.vue';
 const projects = ref([]);
 onMounted(async () => {
-  try { const response = await
-axios.get('http://localhost:3000/api/projects'); projects.value =
-response.data; } catch (error) { console.error(error); }
+  try {
+    const response = await axios.get('/api/projects'); // Perubahan di sini
+    projects.value = response.data;
+  } catch (error) {
+    console.error(error);
+  }
 });
 </script>
 <template>

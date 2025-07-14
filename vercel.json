@@ -9,14 +9,14 @@
       }
     },
     {
-      "src": "api/*.js",
+      "src": "api/index.js", // <-- PERBAIKAN: Hanya bangun api/index.js
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/api/$1.js"
+      "dest": "/api/index.js" // <-- PERBAIKAN: Arahkan semua ke api/index.js
     },
     {
       "src": "/(.*)",

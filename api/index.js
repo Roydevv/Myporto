@@ -63,8 +63,7 @@ app.post('/api/send-email', async (req, res) => {
             user: process.env.EMAIL_USER, // Variabel lingkungan untuk email pengirim
             pass: process.env.EMAIL_PASS  // Variabel lingkungan untuk password email pengirim
         }
-    }
-);
+    });
 
     const mailOptions = {
         from: process.env.EMAIL_USER,
@@ -84,10 +83,3 @@ app.post('/api/send-email', async (req, res) => {
 
 // Vercel serverless function entry point
 export default app;
-
-// BAGIAN INI HARUS DIHAPUS SEPENUHNYA UNTUK DEPLOYMENT KE VERCEL
-// if (process.env.NODE_ENV !== 'production') {
-//     app.listen(port, () => {
-//         console.log(`Server is running on http://localhost:${port}`);
-//     });
-// }

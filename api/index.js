@@ -4,7 +4,7 @@ import express from 'express';
 import cors from 'cors';
 import nodemailer from 'nodemailer';
 
-// Jalur ke data.js sudah benar
+// Jalur ke data.js
 import { educationHistory, skills, projects } from '../data.js';
 
 const app = express();
@@ -12,8 +12,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// --- PERBAIKAN PADA ROUTES ---
-// Hapus awalan '/api' dari setiap rute
+// --- ROUTES TANPA AWALAN /api ---
 app.get('/education', (req, res) => res.json(educationHistory));
 app.get('/skills', (req, res) => res.json(skills));
 app.get('/projects', (req, res) => res.json(projects));
@@ -22,7 +21,7 @@ app.get('/projects', (req, res) => res.json(projects));
 app.post('/send-email', async (req, res) => {
   const { name, email, message } = req.body;
 
-  // Konfigurasi Nodemailer (pastikan variabel lingkungan sudah diatur di Vercel)
+  // Pastikan variabel lingkungan sudah diatur di Vercel
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {

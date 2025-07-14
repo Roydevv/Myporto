@@ -1,20 +1,15 @@
 {
-  "name": "api",
+  "name": "myporto-root",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Root package for Myporto project",
+  "type": "module",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm run dev --workspace=frontend",
+    "start:api": "node api/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "nodemailer": "^7.0.5"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.10"
-  }
+  "workspaces": [
+    "frontend",
+    "api"
+  ]
 }

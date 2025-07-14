@@ -3,25 +3,36 @@
 import express from 'express';
 import cors from 'cors';
 import nodemailer from 'nodemailer';
-
-// Jalur ke data.js
 import { educationHistory, skills, projects } from '../data.js';
 
 const app = express();
 
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-// --- ROUTES TANPA AWALAN /api ---
-app.get('/education', (req, res) => res.json(educationHistory));
-app.get('/skills', (req, res) => res.json(skills));
-app.get('/projects', (req, res) => res.json(projects));
+// --- ROUTES API ---
+// Rute didefinisikan tanpa awalan /api
+app.get("/education", (req, res) => {
+  res.json(educationHistory);
+});
 
-// --- API UNTUK MENGIRIM EMAIL ---
-app.post('/send-email', async (req, res) => {
+app.get("/skills", (req, res) => {
+  res.json(skills);
+});
+
+app.get("/projects", (req, res) => {
+  res.json(projects);
+});
+
+// Endpoint untuk mengirim email
+app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
 
-  // Pastikan variabel lingkungan sudah diatur di Vercel
+  if (!name || !email || !message) {
+    return res.status(400).send('Semua field harus diisi.');
+  }
+
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -46,5 +57,5 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
-// Ekspor aplikasi untuk Vercel
+// Ekspor app untuk Vercel
 export default app;

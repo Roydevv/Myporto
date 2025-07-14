@@ -2,10 +2,11 @@
   "name": "api",
   "version": "1.0.0",
   "license": "ISC",
+  "type": "module",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.2",
-    "nodemailer": "^6.10.1"
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.14"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"

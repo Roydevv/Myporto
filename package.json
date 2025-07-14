@@ -5,8 +5,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "npm run dev --workspace=frontend",
-    "start:api": "node api/index.js"
+    "dev": "npm run dev --workspace=frontend"
   },
   "workspaces": [
     "frontend",
@@ -14,13 +13,5 @@
   ],
   "engines": {
     "node": ">=18.0.0"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "nodemailer": "^7.0.5"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.10"
   }
 }

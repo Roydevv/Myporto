@@ -20,8 +20,8 @@ async function handleSubmit() {
   isSending.value = true;
   errorMessage.value = '';
   try {
-    // Kirim data ke backend
-    await axios.post('/api/send-email', form); // Perubahan di sini
+    // Kirim data ke backend - UBAH KE URL RELATIF
+    await axios.post('/api/send-email', form);
     messageSent.value = true;
   } catch (error) {
     errorMessage.value = 'Gagal mengirim pesan, coba lagi nanti.';
@@ -42,9 +42,7 @@ async function handleSubmit() {
         <span class="block sm:inline"> Pesanmu sudah berhasil terkirim.</span>
       </div>
 
-      <form v-else @submit.prevent="handleSubmit" class="max-w-xl mx-auto">
-        <p class="text-xl text-gray-300 mb-8">Jangan ragu untuk terhubung atau bertanya.</p>
-
+      <form v-else @submit.prevent="handleSubmit" class="max-w-xl mx-auto p-8 bg-gray-700 rounded-lg shadow-md">
         <div class="mb-4">
           <input v-model="form.name" type="text" placeholder="Nama Anda" required class="w-full px-4 py-2 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
@@ -63,10 +61,16 @@ async function handleSubmit() {
       </form>
 
       <div class="flex justify-center space-x-6 mt-12 mb-8">
-        <a href="#" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">GitHub</a>
-        <a href="#" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">LinkedIn</a>
+        <a href="#" target="_blank" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+          <i class="fab fa-github text-4xl"></i>
+        </a>
+        <a href="#" target="_blank" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+          <i class="fab fa-linkedin text-4xl"></i>
+        </a>
+        <a href="#" target="_blank" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+          <i class="fas fa-envelope text-4xl"></i>
+        </a>
       </div>
-      <p class="text-gray-500">&copy; {{ new Date().getFullYear() }} Roy Devgantara Purba. Dibuat dengan Vue.js</p>
     </div>
   </footer>
 </template>

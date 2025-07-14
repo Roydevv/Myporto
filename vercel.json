@@ -23,5 +23,4 @@
       "dest": "/frontend/$1"
     }
   ],
-  "installCommand": "npm install" // <-- TAMBAHKAN BARIS INI
 }
